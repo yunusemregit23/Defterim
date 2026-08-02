@@ -18,10 +18,13 @@ unutur. Defterim üçünün arasındaki köprüyü kurar:
 
 ## Dokümanlar
 
+- [`docs/02-OZELLIKLER.md`](docs/02-OZELLIKLER.md) — **asıl tasarım dokümanı.**
+  10 tıkanma noktası ve her birini çözen özellik. Bir özelliğin burada karşılığı
+  yoksa yapılmaz.
 - [`docs/00-ARASTIRMA.md`](docs/00-ARASTIRMA.md) — ürün fikri, mimari kararlar,
   kapsam sözleşmesi ve yapmayacaklar listesi.
-- [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — derin pazar araştırması: rakipler,
-  kullanıcı sayıları, popülerlik sebepleri, tutundurma verileri, persona dikeyi.
+- [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — pazar araştırması (referans): rakipler,
+  popülerlik sebepleri, tutundurma verileri.
 
 ## Yol Haritası
 
