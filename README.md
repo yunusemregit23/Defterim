@@ -18,8 +18,10 @@ unutur. Defterim üçünün arasındaki köprüyü kurar:
 
 ## Dokümanlar
 
-- [`docs/00-ARASTIRMA.md`](docs/00-ARASTIRMA.md) — pazar araştırması, mimari
-  kararlar, kapsam sözleşmesi ve yapmayacaklar listesi.
+- [`docs/00-ARASTIRMA.md`](docs/00-ARASTIRMA.md) — ürün fikri, mimari kararlar,
+  kapsam sözleşmesi ve yapmayacaklar listesi.
+- [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — derin pazar araştırması: rakipler,
+  kullanıcı sayıları, popülerlik sebepleri, tutundurma verileri, persona dikeyi.
 
 ## Yol Haritası
 

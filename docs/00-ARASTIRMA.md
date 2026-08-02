@@ -16,6 +16,10 @@ Hatırlatıcı değil — **hatırlatıcı + planlayıcı + tetikleyici**. Fark�
 
 ## 2. Pazar Durumu: Kim Ne Yapıyor, Nerede Boşluk Var
 
+> **Bu bölümün derinleştirilmiş hali: [`01-PAZAR.md`](01-PAZAR.md)** — kullanıcı
+> sayıları, popülerlik sebepleri, sektör/persona dikeyi ayrımı, tutundurma
+> verileri ve 7 katmanlı kategori haritası orada.
+
 ### 2.1 Mevcut oyuncular ve konumları
 
 | Ürün | Ne yapıyor | Zayıf tarafı | Fiyat |
@@ -50,6 +54,13 @@ Defterim'in adı zaten bunu söylüyor: önce defter, sonra plan.
 
 > Motion'ın otomatik planlamasını, Sunsama'nın sakinliğiyle, bir defterin
 > serbestliği içinde — telefonda.
+
+**Güncelleme (derin araştırma sonrası):** Bu cümle fazla genel. `01-PAZAR.md` §5.2'nin
+bulgusu şu: genel görev uygulaması pazarı kapalı, kazananların hepsi bir **persona
+dikeyine** oturuyor. Defterim'in konumu daha dar olmalı:
+
+> **İki hayatlı insanın defteri** — gündüzü başkasının takviminde geçen,
+> kendi işini aralara ve mesai dışına sıkıştıran kişi için.
 
 ---
 
@@ -279,15 +290,23 @@ v0.1 iskeleti kurulur.
 
 ---
 
-## 11. Cevap Bekleyen Sorular
+## 11. Cevaplanmış Sorular ve Sonuçları
 
-Bunlar cevaplanmadan v0.1 kodu yazılmaz — çünkü hepsi ürünün şeklini değiştirir.
+| Soru | Cevap | Mimariye etkisi |
+|---|---|---|
+| Ne için kullanacaksın? | **Kendi işim/girişim + ofis/sabit mesai** | İki bağlamlı gün modeli (§2.3). Zamanlayıcının asıl işi mesai dışı zamanı korumak. |
+| "2 aşama önerisi" doğru anlaşıldı mı? | **Evet — aksiyon sonrası devam önerisi** | §3 aynen geçerli. Görev zinciri çekirdek özellik. |
+| Kişisel mi, ürün mü? | **Şimdilik sadece sen** | **Supabase/backend iptal.** Hesap yok, sunucu yok, her şey cihazda. AI anahtarı cihazda güvenli depolamada. En hızlı yol. |
+| Ton? | **Dürüst ve sert** | Bildirim metinleri yüze söyler: *"Bu aramayı 3. kez erteliyorsun. Ya bugün yap ya listeden sil."* |
 
-1. **Sen bu uygulamayı ne için kullanacaksın?** (öğrencilik / serbest çalışma /
-   ofis işi / kendi işin / kişisel düzen)
-2. **Günün nasıl geçiyor?** Sabit mesai var mı, en verimli saatlerin hangileri?
-3. **"2 aşama önerisi" ile tam olarak neyi kastettin?** Benim §3'teki yorumum
-   (aksiyon sonrası devam önerisi) doğru mu, yoksa başka bir şey mi düşündün?
-4. **Uygulama sana nasıl konuşsun?** Nazik mi, nötr mü, sert mi?
-5. **Sadece sana mı, yoksa yayınlanacak bir ürün mü?** (bu, backend ve
-   maliyet kararlarını tamamen değiştirir)
+**§4.1 tablosunda değişen satır:** `Backend: Supabase` → **`Backend: yok`**.
+Kişisel kullanımda AI çağrıları doğrudan cihazdan yapılır, anahtar
+`expo-secure-store` içinde durur. Bu, projeden bir hafta iş siler.
+
+### Kalan tek açık soru
+
+**Günün nasıl geçiyor?** Sabit mesai saatlerin, en verimli saatlerin ve kendi işine
+ayırabildiğin zaman aralıkları. Bu bilgi olmadan zamanlayıcı yazılabilir ama
+kalibre edilemez — v0.2'ye kadar cevaplanması yeterli, v0.1'i bloke etmiyor.
+
+Cevaplar `02-KISISELLESTIRME.md` dosyasına profil olarak yazılacak.
