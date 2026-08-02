@@ -16,6 +16,10 @@ unutur. Defterim üçünün arasındaki köprüyü kurar:
 3. **Devamı gelsin** — aksiyonu aldıktan (veya almadıktan) sonra uygulama bir
    sonraki adımı önerir.
 
+Defterim'in iki sütunu var: **dünyevi iş katmanı** (yukarıdaki) ve
+**manevi katman** — tezekkür-ü mevt, muhasebe ve tövbe. İkisi aynı defterde,
+aynı motoru paylaşır.
+
 ## Dokümanlar
 
 - [`docs/02-OZELLIKLER.md`](docs/02-OZELLIKLER.md) — **asıl tasarım dokümanı.**
@@ -23,6 +27,8 @@ unutur. Defterim üçünün arasındaki köprüyü kurar:
   yoksa yapılmaz.
 - [`docs/00-ARASTIRMA.md`](docs/00-ARASTIRMA.md) — ürün fikri, mimari kararlar,
   kapsam sözleşmesi ve yapmayacaklar listesi.
+- [`docs/03-MANEVI-KATMAN.md`](docs/03-MANEVI-KATMAN.md) — tezekkür-ü mevt ve
+  muhasebe sütunu: namaz vakti çıpaları, külliyat kuralları, Tövbe Defteri.
 - [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — pazar araştırması (referans): rakipler,
   popülerlik sebepleri, tutundurma verileri.
 
