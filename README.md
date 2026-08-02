@@ -29,6 +29,8 @@ aynı motoru paylaşır.
   kapsam sözleşmesi ve yapmayacaklar listesi.
 - [`docs/03-MANEVI-KATMAN.md`](docs/03-MANEVI-KATMAN.md) — tezekkür-ü mevt ve
   muhasebe sütunu: namaz vakti çıpaları, külliyat kuralları, Tövbe Defteri.
+- [`docs/04-DIKKAT.md`](docs/04-DIKKAT.md) — sosyal medya ve zaman sızıntısı:
+  neden engelleme çalışmıyor, boşluk doldurma stratejisi, eşik araya girme.
 - [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — pazar araştırması (referans): rakipler,
   popülerlik sebepleri, tutundurma verileri.
 
