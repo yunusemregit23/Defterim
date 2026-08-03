@@ -117,7 +117,7 @@ Araştırma literatüründen üç bulgu, tasarımı doğrudan belirliyor:
 | İstemci | **Expo (React Native)** | Tek kod tabanıyla iOS+Android; OTA güncelleme; bildirim/arka plan modülleri hazır. Flutter da uygun ama JS ekosistemi ve AI SDK'ları RN tarafında daha zengin. |
 | Yerel veri | **expo-sqlite + Drizzle ORM** | 2026 önerisi bu: tip güvenliği + canlı sorgular. WatermelonDB daha güçlü ama ağır ve sync sunucusunu kendin yazarsın. Bize gerekmiyor. |
 | Senkron | **v1'de yok.** Sonra PowerSync / Turso Offline Sync | Sync altyapısını erken yazmak en klasik zaman kaybı. Tek cihaz + yerel yedek ile başla. |
-| Backend | **Supabase** (auth + Postgres + Edge Functions) | AI anahtarını istemcide tutmamak için ince bir proxy yeterli. |
+| Backend | **Yok** (kişisel kullanım kararı, §11) | Hesap yok, sunucu yok, her şey cihazda. AI çağrıları doğrudan cihazdan, anahtar `expo-secure-store`'da. |
 | Bildirim | `expo-notifications` (yerel) + `expo-task-manager`/`expo-background-task` | Aşağıdaki kısıtlara dikkat. |
 
 ### 4.2 Kritik platform kısıtları (bunlar mimariyi belirliyor)
@@ -201,18 +201,24 @@ açmadan yaşayabiliyor musun? Cevap hayırsa v0.2'ye geçilmez.
 - [ ] Otomatik takvim yerleşimi (deterministik zamanlayıcı + çakışma çözümü)
 - [ ] Çalışma saatleri, sessiz saatler, bildirim bütçesi
 - [ ] Rutinler + tutturma serisi
-- [ ] Gün sonu 60 saniyelik kapanış ritüeli
 
 ### v0.3 — "İkinci Aşama"
 - [ ] Aşama-2 öneri motoru (§3)
 - [ ] Erteleme örüntüsü tespiti ve buna göre yeniden zamanlama
-- [ ] Haftalık geri bildirim (Türkçe, dürüst, kısa)
-- [ ] Rutin tutturulduğunda bildirim seyreltme
+- [ ] Haftalık geri bildirim + gün sonu 60 saniyelik kapanış ritüeli
+      (`02-OZELLIKLER.md` Cephe 9 — veri birikmeden anlamsız, o yüzden v0.2 değil v0.3)
 
 ### v1.0 — "Kişisel"
 - [ ] Kişiselleştirme katmanı (§11'deki cevaplara göre)
+- [ ] Rutin tutturulduğunda bildirim seyreltme
+      (`02-OZELLIKLER.md` Cephe 10 — 3-4 haftalık kullanım verisi gerektiriyor)
 - [ ] Takvim entegrasyonu (Google/Apple, salt-okunur → sonra yazma)
 - [ ] Bulut yedek + çok cihaz senkronu
+
+> **Not:** Bu tablo `02-OZELLIKLER.md`'deki cephe-bazlı sürüm dağılımıyla
+> hizalandı (önceki bir sürümde iki kalem farklı yerdeydi — düzeltildi).
+> Manevi/dikkat/konum sütunlarının kendi sürüm tabloları için ilgili
+> dokümanlara bakın.
 
 ### ❌ YAPMAYACAKLAR LİSTESİ (v1.0'a kadar tartışmaya kapalı)
 
@@ -252,7 +258,7 @@ bu liste:
 Açık olmam gerekiyor: **seni tanımıyorum.** Bu oturumdaki tek bilgim e-posta
 adresin ve depo adının "Defterim" olduğu. Uygulamayı sana göre şekillendirmek
 için tahmin yürütmek yerine soracağım (§11) — ve verdiğin cevaplar
-`docs/01-KISISELLESTIRME.md` dosyasına, kodun okuduğu bir profil olarak yazılacak.
+`docs/06-KISISELLESTIRME.md` dosyasına, kodun okuduğu bir profil olarak yazılacak.
 
 Kişiselleştirmenin üç katmanı olacak:
 
@@ -266,8 +272,10 @@ Kişiselleştirmenin üç katmanı olacak:
 
 ## 9. Sonraki Adım
 
-§11'deki soruları cevapla → `01-KISISELLESTIRME.md` ve `02-MIMARI.md` yazılır →
-v0.1 iskeleti kurulur.
+§11'deki sorular cevaplandı, sonuç `06-KISISELLESTIRME.md`'de. Ayrı bir
+`02-MIMARI.md` yazılmadı — mimari kararlar §4'te ve 03/04/05'in kendi
+"Teknik Kararlar" bölümlerinde dağınık şekilde duruyor, ihtiyaç yeterli.
+Sıradaki adım: **v0.1 kod iskeleti.**
 
 ---
 
@@ -299,14 +307,24 @@ v0.1 iskeleti kurulur.
 | Kişisel mi, ürün mü? | **Şimdilik sadece sen** | **Supabase/backend iptal.** Hesap yok, sunucu yok, her şey cihazda. AI anahtarı cihazda güvenli depolamada. En hızlı yol. |
 | Ton? | **Dürüst ve sert** | Bildirim metinleri yüze söyler: *"Bu aramayı 3. kez erteliyorsun. Ya bugün yap ya listeden sil."* |
 
-**§4.1 tablosunda değişen satır:** `Backend: Supabase` → **`Backend: yok`**.
-Kişisel kullanımda AI çağrıları doğrudan cihazdan yapılır, anahtar
-`expo-secure-store` içinde durur. Bu, projeden bir hafta iş siler.
+Bu karar §4.1 tablosuna işlendi ve projeden bir hafta iş siler.
 
-### Kalan tek açık soru
+### Kalan açık soru
 
 **Günün nasıl geçiyor?** Sabit mesai saatlerin, en verimli saatlerin ve kendi işine
 ayırabildiğin zaman aralıkları. Bu bilgi olmadan zamanlayıcı yazılabilir ama
 kalibre edilemez — v0.2'ye kadar cevaplanması yeterli, v0.1'i bloke etmiyor.
 
-Cevaplar `02-KISISELLESTIRME.md` dosyasına profil olarak yazılacak.
+### Sonradan gelen cevaplar
+
+Sonraki oturumlarda dört yeni katman ve kişiselleştirme profili eklendi.
+Bu doküman artık **tek başına güncel roadmap değil** — aşağıdaki dosyalar
+onu tamamlıyor ve bazı yerlerde (§6'daki sürüm yerleşimi gibi) daha isabetli
+kararlar içeriyor:
+
+- [`02-OZELLIKLER.md`](02-OZELLIKLER.md) — dünyevi katmanın 10 cephesi ve
+  **asıl geçerli sürüm dağılımı** (§6'daki tablo yerine bunu esas al).
+- [`03-MANEVI-KATMAN.md`](03-MANEVI-KATMAN.md), [`04-DIKKAT.md`](04-DIKKAT.md),
+  [`05-KONUM.md`](05-KONUM.md) — üç ek sütun, kendi sürüm tablolarıyla.
+- [`06-KISISELLESTIRME.md`](06-KISISELLESTIRME.md) — kişiselleştirme profili
+  ve ilk config taslağı (bu bölümün "sonraki adım" olarak işaret ettiği yer).

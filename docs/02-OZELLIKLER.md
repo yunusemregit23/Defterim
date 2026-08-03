@@ -186,6 +186,13 @@ boşluk gördükleri yere iş koyuyorlar.
 - Bağlam geçişinden önce **kapanış satırı**: *"Mesaiyi burada bırakıyorsun.
   Yarım kalan: X. Not düş, kafandan çıksın."* — dikkat kalıntısını temizler.
 
+> **Güncelleme (`06-KISISELLESTIRME.md`):** "Mesai" bağlamı ikiye ayrıldı —
+> `ofis` (zaman bazlı, sabit) ve `saha` (konum bazlı, `05-KONUM.md`'deki
+> geofence'lerle tetiklenir — örn. şantiye). Saha işleri zamana değil
+> **konuma** bağlı olduğu için asgari blok süresi kuralı onlara uygulanmaz;
+> oraya vardığında tetiklenirler. Güncel dörtlü: `ofis` / `saha` /
+> `kendi işim` / `kişisel`.
+
 ---
 
 ## Cephe 6 — Karar yorgunluğu: "şimdi ne yapsam?"
