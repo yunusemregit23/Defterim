@@ -35,6 +35,8 @@ aynı motoru paylaşır.
   (şantiye) ve kategori (yakındaki kırtasiye) ayrımı, geofencing sınırları.
 - [`docs/06-KISISELLESTIRME.md`](docs/06-KISISELLESTIRME.md) — kişiselleştirme
   profili: bilinen ve tahmin edilen ayrı ayrı işaretli, ilk config varsayılanları.
+- [`docs/07-HAFIZA.md`](docs/07-HAFIZA.md) — AI hafızası: davranışsal öğrenme
+  tablolarının konsolide şeması, şifreleme, sürüm yerleşimi. Kodu henüz yok.
 - [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — pazar araştırması (referans): rakipler,
   popülerlik sebepleri, tutundurma verileri.
 
