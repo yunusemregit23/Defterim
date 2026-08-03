@@ -31,6 +31,7 @@ izler. Aşağıda ikiye ayırdım — **söylediğin** ve **söylediğinden çı
 | Konum örnekleri | Şantiye (boyama işi) + çarşı/kırtasiye |
 | Konum yöntemi | Kendi işaretlediğin yerler, dış veri kaynağı yok |
 | İzin ve varsayılanlar | Arka plan konum izni ve 75 m yarıçap onaylandı |
+| Sosyal medya hedefi | **Instagram** — engelleme değil, boşluk doldurma + eşik araya girme |
 
 ---
 
@@ -63,17 +64,16 @@ Diyanet hesaplama metodunu muhtemelen bekliyorsun (Türkiye'de standart).
 → **Etkisi:** `03-MANEVI-KATMAN.md`'deki namaz vakti metodu varsayılanı
 **Diyanet** olarak sabitleniyor (aksini söylemedikçe).
 
-### 2.3 Sosyal medya itirafı — kendiliğinden geldi
-Sana sormadım, sen açtın. Bu, meselenin **rahatsız edici** boyutta olduğunu
-ve çözüm istediğini gösteriyor — ama hangi uygulama olduğunu söylemedin.
+### 2.3 Sosyal medya hedefi — artık tahmin değil, kesin
+Sana sormadım, sen açtın; sonra doğrudan söyledin: **Instagram.** Bu artık
+§1'e taşınabilecek kesin bir bilgi, ama iz sürme mantığını göstermesi için
+burada bırakıyorum — önce çıkarım boştu ("hangi uygulama bilmiyorum, ölçerek
+bulunsun"), sonra sen doldurdun.
 
-→ **Çıkarım:** En yaygın sızıntı noktaları (Instagram, YouTube, X/Twitter,
-TikTok) olası hedefler, ama bu gerçek bir tahmin, veri değil.
-
-→ **Etkisi:** `04-DIKKAT.md`'deki hedef uygulama listesi **varsayılan olarak
-boş** kalmalı; uygulama seni izleyip **kendisi bulmalı** (Özellik 3 — niyet
-sorusu, hangi uygulamada sık "sadece bakıyorum" dediğini sayar). Tahmin
-etmek yerine ölçmek daha doğru.
+→ **Kesinleşen:** Hedef uygulama Instagram. `04-DIKKAT.md`'deki tüm özellikler
+(boşluk doldurma, eşik araya girme, niyet sorusu, sızıntı raporu) öncelikle
+Instagram için etkinleşecek. Diğer uygulamalar (YouTube, X, TikTok) yine
+ölçülerek eklenir — varsayımla değil.
 
 ### 2.4 Sert ton tercihi — tutarlı bir kişilik sinyali
 "Sert" istemen tek bir yerde kalmadı — bunu ton sorusuna da, manevi katman
@@ -113,8 +113,10 @@ manevi_katman:
   tövbe_defteri: aktif, cihazda şifreli
 
 dikkat_katmanı:
-  hedef_uygulamalar: []     # boş başlar, uygulama kendi bulur (bkz §2.3)
+  hedef_uygulamalar: ["Instagram"]   # kesin — kullanıcı doğrudan söyledi
+  engelleme: hayır          # kanıtlanmış şekilde işe yaramıyor, bkz 04-DIKKAT.md §2
   boşluk_doldurma: aktif    # izin gerektirmeyen, en etkili özellik
+  eşik_araya_girme: aktif   # Wellspent mekanizması — sorar, engellemez
   günlük_sınır: kullanıcı_belirler   # sıfır hedef yok, Wellspent bulgusu
 
 konum_katmanı:
