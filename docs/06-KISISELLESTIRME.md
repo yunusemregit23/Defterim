@@ -31,7 +31,7 @@ izler. Aşağıda ikiye ayırdım — **söylediğin** ve **söylediğinden çı
 | Konum örnekleri | Şantiye (boyama işi) + çarşı/kırtasiye |
 | Konum yöntemi | Kendi işaretlediğin yerler, dış veri kaynağı yok |
 | İzin ve varsayılanlar | Arka plan konum izni ve 75 m yarıçap onaylandı |
-| Sosyal medya hedefi | **Instagram** — engelleme değil, boşluk doldurma + eşik araya girme |
+| Sosyal medya hedefi | **Instagram, TikTok, YouTube, Facebook, CapCut** — engelleme değil, boşluk doldurma + eşik araya girme |
 
 ---
 
@@ -64,16 +64,27 @@ Diyanet hesaplama metodunu muhtemelen bekliyorsun (Türkiye'de standart).
 → **Etkisi:** `03-MANEVI-KATMAN.md`'deki namaz vakti metodu varsayılanı
 **Diyanet** olarak sabitleniyor (aksini söylemedikçe).
 
-### 2.3 Sosyal medya hedefi — artık tahmin değil, kesin
-Sana sormadım, sen açtın; sonra doğrudan söyledin: **Instagram.** Bu artık
-§1'e taşınabilecek kesin bir bilgi, ama iz sürme mantığını göstermesi için
-burada bırakıyorum — önce çıkarım boştu ("hangi uygulama bilmiyorum, ölçerek
-bulunsun"), sonra sen doldurdun.
+### 2.3 Sosyal medya hedefi — Instagram'dan genişledi, tüm platformlar
+Önce Instagram dedin, sonra genişlettin: **TikTok, YouTube, Facebook, CapCut**
+ve benzerleri. Yani sorun tek bir uygulama değil, **format** — kısa video/akış
+tüketimi. Bu önemli bir ayrım: hedef "Instagram'ı bırakmak" değil, **kaydırma
+davranışının kendisi**, hangi uygulamada olursa olsun.
 
-→ **Kesinleşen:** Hedef uygulama Instagram. `04-DIKKAT.md`'deki tüm özellikler
-(boşluk doldurma, eşik araya girme, niyet sorusu, sızıntı raporu) öncelikle
-Instagram için etkinleşecek. Diğer uygulamalar (YouTube, X, TikTok) yine
-ölçülerek eklenir — varsayımla değil.
+→ **Kesinleşen:** Hedef liste artık tek uygulama değil, **kategori**:
+Instagram, TikTok, YouTube, Facebook, CapCut. Liste kapalı değil — benzer
+bir uygulama fark edersen (Reels, Shorts tüketimi olan her şey) eklenir.
+
+→ **Not — CapCut farklı bir tür:** Diğerleri saf tüketim (içerik izleme),
+CapCut bir düzenleme aracı ama şablon/trend keşfi ekranı üzerinden benzer bir
+kaydırma tuzağına sahip. `04-DIKKAT.md`'deki mekanizmalar (boşluk doldurma,
+eşik araya girme) hepsine aynı şekilde uygulanır — uygulama türü değişse de
+tetiklenen davranış (dürtüsel açma, sınırsız kaydırma) aynı.
+
+→ **Etkisi:** `04-DIKKAT.md`'deki tüm özellikler (boşluk doldurma, eşik araya
+girme, niyet sorusu, sızıntı raporu) bu **beş uygulama için birlikte**
+etkinleşecek. Sızıntı raporu da tek tek değil, toplu gösterilecek: *"Bu hafta
+kısa video/akış uygulamalarında toplam X saat"* — tek tek Instagram/TikTok
+ayrımı ikincil, toplam rakam birincil.
 
 ### 2.4 Sert ton tercihi — tutarlı bir kişilik sinyali
 "Sert" istemen tek bir yerde kalmadı — bunu ton sorusuna da, manevi katman
@@ -113,10 +124,12 @@ manevi_katman:
   tövbe_defteri: aktif, cihazda şifreli
 
 dikkat_katmanı:
-  hedef_uygulamalar: ["Instagram"]   # kesin — kullanıcı doğrudan söyledi
+  hedef_uygulamalar: ["Instagram", "TikTok", "YouTube", "Facebook", "CapCut"]
+  hedef_türü: kısa_video_ve_akış_tüketimi   # tek uygulama değil, format sorunu
   engelleme: hayır          # kanıtlanmış şekilde işe yaramıyor, bkz 04-DIKKAT.md §2
   boşluk_doldurma: aktif    # izin gerektirmeyen, en etkili özellik
   eşik_araya_girme: aktif   # Wellspent mekanizması — sorar, engellemez
+  sızıntı_raporu: toplu     # tek tek değil, "kısa video/akış" toplamı
   günlük_sınır: kullanıcı_belirler   # sıfır hedef yok, Wellspent bulgusu
 
 konum_katmanı:
