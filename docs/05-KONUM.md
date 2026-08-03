@@ -92,21 +92,14 @@ hangi dükkanlar var"** sorusuna cevap vermesi demek. Bu, geofencing'in
 çözdüğü problem değil — bu bir **yer arama (POI search)** problemi ve
 POI verisi telefonda değil, bir haritada/veritabanında duruyor.
 
-### İki gerçekçi yol var
+### Karar: Yol B — kendi işaretlediğin yerler
 
-#### Yol A — Çevrimiçi POI sorgusu (OpenStreetMap Overpass API)
+Sordum, cevap net geldi: **canlı POI sorgusu (Yol A / OpenStreetMap) kapsam
+dışı.** Sadece kendi işaretlediğin yerler kullanılacak. Gerekçesi hem senin
+tercihinle hem `00-ARASTIRMA.md`'deki "her şey cihazda, backend yok"
+kararıyla tam örtüşüyor — tek bir ağ isteği bile açmıyoruz.
 
-- **Ücretsiz**, cömert limitli. Google Places ise **1000 sorguda $7.**
-- Kapsamı: dükkan, market, eczane, vb. 20'den fazla kategoriyle sorgulanabilir.
-- **Türkiye kapsamı değişken** — büyük şehirlerde iyi, küçük yerleşimlerde
-  ve özellikle "kırtasiye" gibi niş kategorilerde eksik/güncel olmayan
-  veri riski var. OSM gönüllü emeğiyle güncellenen bir veri tabanı.
-- **Bunun bedeli:** anlık konumun bir sunucuya (Overpass/OSM altyapısı)
-  sorgu olarak gitmesi gerekiyor. `00-ARASTIRMA.md`'deki "her şey cihazda,
-  backend yok" kararını **kısmen** deliyor — bu tek özellik için dışarıya
-  bir ağ isteği çıkıyor.
-
-#### Yol B — Kendi kısıtlı POI listen (offline, gizlilik dostu, ama dar)
+#### Yol B — Kendi işaretlediğin yerler (offline, tek yol)
 
 - Sen zaman içinde "sık gittiğim kırtasiyeler" gibi birkaç yeri kendin
   işaretlersin (Örnek 2'deki gibi, ama kategori etiketiyle: `#kırtasiye`).
@@ -114,20 +107,14 @@ POI verisi telefonda değil, bir haritada/veritabanında duruyor.
 - **Dezavantaj:** sadece senin daha önce gittiğin yerleri bilir. Hiç
   gitmediğin bir mahallede "yakında kırtasiye var mı" diyemez.
 
-### Karar önerisi
+### Gerekçe
 
-> **v0.2'de Yol B, sonra isteğe bağlı Yol A.**
->
-> Gerekçe: Sen zaten belirli yerlerde dolaşıyorsun (ev, iş, şantiye, sık
-> gittiğin çarşı). Birkaç haftalık kullanımda "sık gittiğin 5-6 dükkan"
-> kendiliğinden birikir — çünkü zaten oralardan geçerken bildirim tetiklenip
-> tetiklenmediğini görürsün ve yenisini eklersin. Bu, "sıfır kurulum" ilkesiyle
-> de uyumlu: gerçek kullanım, veriyi organik biriktirir.
->
-> Yol A (gerçek zamanlı OSM sorgusu) **hiç gitmediğin bir yerde** işe yarar
-> ama tek bir ağ bağımlılığı katıyor. Bunu **açıkça opsiyonel** bir ayar
-> yapmak doğru: "Bilmediğim yerlerde de ara" anahtarı kapalı başlar, açarsan
-> anlık konumun (sadece o sorgu anında) OSM'e gider.
+Sen zaten belirli yerlerde dolaşıyorsun (ev, iş, şantiye, sık gittiğin çarşı).
+Birkaç haftalık kullanımda "sık gittiğin 5-6 dükkan" kendiliğinden birikir —
+çünkü zaten oralardan geçerken bildirim tetiklenip tetiklenmediğini görürsün
+ve yenisini eklersin. Bu, "sıfır kurulum" ilkesiyle de uyumlu: gerçek kullanım,
+veriyi organik biriktirir. Hiç gitmediğin bir yerde işe yaramaz ama bu, sıfır
+ağ isteği ve sıfır üçüncü taraf veri kaynağı karşılığında kabul edilen bir sınır.
 
 ### Defterim'de akış (Yol B ile)
 
@@ -194,16 +181,18 @@ Konum tetiklemesi de `00-ARASTIRMA.md` §3'teki motoru kullanır:
 | Sürüm | Kapsam | Gerekçe |
 |---|---|---|
 | **v0.2** | Örnek 2 — Sabit nokta geofence (harita üstünde işaretle) | Basit, offline, pil dostu, mevcut teknoloji |
-| **v0.3** | Örnek 1 — Yol B (kendi işaretlediğin kategori yerler) | Organik veri birikimi, hâlâ offline |
-| **v1.0** | Örnek 1 — Yol A (OSM canlı sorgu, opsiyonel anahtar) | Ağ bağımlılığı gerektirdiği için en sona; kişisel kullanım kararına en çok gerilim yaratan parça |
+| **v0.3** | Örnek 1 — kendi işaretlediğin kategori yerler | Organik veri birikimi, tamamen offline |
+
+**Canlı OSM sorgusu kalıcı olarak kapsam dışı.** Karara bağlandı — tek yol
+kendi işaretlediğin yerler. Bu, dış veri kaynağı, ağ isteği veya üçüncü taraf
+servis bağımlılığı olmadığı anlamına geliyor; `00-ARASTIRMA.md`'deki
+"her şey cihazda" ilkesi konum katmanında da tam korunuyor.
 
 ---
 
 ## 7. Açık Sorular
 
-1. **Yol A'yı (canlı OSM sorgusu) hiç istiyor musun,** yoksa "sık gittiğim
-   yerler" (Yol B) senin gerçek kullanımın için yeterli mi? Bu, v1.0'da bir
-   iş kalemi ekleyip eklemeyeceğimizi belirliyor.
+1. ~~Yol A'yı istiyor musun?~~ **Kapandı — hayır, sadece kendi işaretlediğin yerler.**
 2. **Konum izni endişen var mı?** Arka plan konum izni (`her zaman izin ver`)
    hem iOS hem Android'de kullanıcıya en "ağır" görünen izin türü. Kişisel
    kullanımda sorun değil ama bilerek onaylaman gerekiyor.
