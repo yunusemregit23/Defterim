@@ -190,15 +190,15 @@ servis bağımlılığı olmadığı anlamına geliyor; `00-ARASTIRMA.md`'deki
 
 ---
 
-## 7. Açık Sorular
+## 7. Açık Sorular — Tümü Kapandı
 
 1. ~~Yol A'yı istiyor musun?~~ **Kapandı — hayır, sadece kendi işaretlediğin yerler.**
-2. **Konum izni endişen var mı?** Arka plan konum izni (`her zaman izin ver`)
-   hem iOS hem Android'de kullanıcıya en "ağır" görünen izin türü. Kişisel
-   kullanımda sorun değil ama bilerek onaylaman gerekiyor.
-3. **Geofence yarıçapı ne olsun?** Şantiye gibi büyük bir alan için 100-150 m
-   makul; küçük bir dükkan için 50 m yeterli. Varsayılan öneri: 75 m,
-   yer bazında değiştirilebilir.
+2. ~~Konum izni endişen var mı?~~ **Kapandı — uygun.** Arka plan konum izni
+   (`her zaman izin ver`) onaylanacak; kişisel kullanımda risk kabul edildi.
+3. ~~Geofence yarıçapı ne olsun?~~ **Kapandı — varsayılan 75 m.** Yer bazında
+   değiştirilebilir; şantiye gibi büyük alanlarda 100-150 m'ye çekilebilir.
+
+Konum katmanının tasarımı bu haliyle netleşti; v0.2/v0.3'te uygulanacak.
 
 ---
 
