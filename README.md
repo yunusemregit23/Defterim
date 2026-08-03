@@ -33,6 +33,8 @@ aynı motoru paylaşır.
   neden engelleme çalışmıyor, boşluk doldurma stratejisi, eşik araya girme.
 - [`docs/05-KONUM.md`](docs/05-KONUM.md) — konum tabanlı hatırlatma: sabit nokta
   (şantiye) ve kategori (yakındaki kırtasiye) ayrımı, geofencing sınırları.
+- [`docs/06-KISISELLESTIRME.md`](docs/06-KISISELLESTIRME.md) — kişiselleştirme
+  profili: bilinen ve tahmin edilen ayrı ayrı işaretli, ilk config varsayılanları.
 - [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — pazar araştırması (referans): rakipler,
   popülerlik sebepleri, tutundurma verileri.
 
