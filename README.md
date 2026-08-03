@@ -31,6 +31,8 @@ aynı motoru paylaşır.
   muhasebe sütunu: namaz vakti çıpaları, külliyat kuralları, Tövbe Defteri.
 - [`docs/04-DIKKAT.md`](docs/04-DIKKAT.md) — sosyal medya ve zaman sızıntısı:
   neden engelleme çalışmıyor, boşluk doldurma stratejisi, eşik araya girme.
+- [`docs/05-KONUM.md`](docs/05-KONUM.md) — konum tabanlı hatırlatma: sabit nokta
+  (şantiye) ve kategori (yakındaki kırtasiye) ayrımı, geofencing sınırları.
 - [`docs/01-PAZAR.md`](docs/01-PAZAR.md) — pazar araştırması (referans): rakipler,
   popülerlik sebepleri, tutundurma verileri.
 
